@@ -1,7 +1,7 @@
 console.log("belive");
 
 
-//java script mapping operator
+//javascript mapping operator
 var array =[1,2,3,45]
 var output =array.map(
     function(element){
@@ -70,10 +70,55 @@ const user1=(num) => {return num+5}
 console.log(user1(10))
 
 //classes 
-class user2{
+/*class user2{
     admin(){
         console.log('For admin')
     }
 }
 let obj = new user2();
 obj.admin();
+
+//For off
+const arr=[1,2,3,4,5]
+for(const a in arr){
+    return a
+}*/
+
+// default operator : some times we have to send multiple variable for a single function and rest of time only 1 is enough so in such case er declar a default variable in the function so the 2nd varaible value will be the dafault value when we didnt give any other variable
+
+function user4(name, age=20){
+
+    console.log(name+" "+age)
+}
+user4('sagar',30)
+user4('sagar')
+
+//Rest operator-This is used when we need to accept any number of variables
+function user5(name,...remaining){
+
+    console.log(name+" "+remaining)
+}
+user5('sagar',30,"mail@gmail",'34')
+user5('sagar')
+//rest operator must always use at last
+// rest = remaining values
+
+//Spread operator- used to spread array of 1 array to another array
+let arr1 =[1,2,3,4,5]
+let arr2 =[6,7,8,9,10]
+let arr3 = [...arr1,...arr2]
+console.log(arr3)
+
+//Destructuring 
+let person ={
+    name:"sag",
+    age:20,
+    gender:"male"
+}
+const {name , age,gender}=person;
+console.log(name)
+/* acttuallu we use person.name to get the data of persons name
+ but when we use destructing concept we just assign all the properties to a const and assign it to person
+ so we can get required information without accessing the perosn.var */
+
+ //E7 operators
