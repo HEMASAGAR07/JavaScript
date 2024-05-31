@@ -11,7 +11,7 @@ var output =array.map(
 console.log(output)
 
 //filter operator
-var array1=[1,2,3,5,2,6]
+var array1=[1,2,3,5,2,6] 
 var output1 = array1.filter(
     function(element){
         return element>2;
